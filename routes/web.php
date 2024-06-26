@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\YoutubeSearchController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
@@ -15,6 +16,7 @@ Route::view('profile', 'profile')
 
 
 Route::get('/player/{id}/{hash}',[PlayerController::class,'index'])->name('player');
+
 
 
 require __DIR__.'/auth.php';
