@@ -1,8 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Dashboard') }}
+            {{ __('Player') }}
         </h2>
     </x-slot>
-    <livewire:session-form></livewire:session-form>
+    <div class="min-h-screen bg-gray-100">
+        <livewire:player-form></livewire:player-form>
+    </div>
+
 </x-app-layout>
