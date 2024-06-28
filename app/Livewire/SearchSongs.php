@@ -9,8 +9,9 @@ class SearchSongs extends Component
 {
     public $searchYoutubeTerm = '';
     public $songs = [];
-
-    public function mount(){
+    public $hash = null;
+    public function mount($hash = null){
+        $this->hash = $hash;
     }
 
     public function search(){
@@ -28,21 +29,6 @@ class SearchSongs extends Component
     public function render()
     {
         return view('livewire.search-songs');
-    }
-
-    public function addToQueue($videoId){
-        $video = Youtube::getVideoInfo($videoId);
-
-        dd($video);
-
-        /**
-         * DETAILS NEEDED FROM YOUTUBE JSON API
-         *
-         *
-         * title,
-         * thumbnails > default  >url
-         *
-         */
     }
 
 }

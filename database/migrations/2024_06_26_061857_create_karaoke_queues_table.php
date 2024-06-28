@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('karaoke_session_id');
             $table->longText('youtube_data');
-            $table->string('queued_by');
+            $table->string('queued_by')->nullable();
             $table->tinyInteger('is_done')->default(0);
-            $table->integer('ordinal');
+            $table->integer('ordinal')->nullable();
             $table->timestamps();
             $table->foreign('karaoke_session_id')->references('id')->on('karaoke_sessions');
 

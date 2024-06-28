@@ -1,7 +1,8 @@
 <?php
 
 return [
-    App\Providers\AppServiceProvider::class,
-    App\Providers\VoltServiceProvider::class,
     Alaouy\Youtube\YoutubeServiceProvider::class,
+    App\Providers\AppServiceProvider::class,
+    App\Providers\KaraokeSessionServiceProvider::class,
+    App\Providers\VoltServiceProvider::class,
 ];

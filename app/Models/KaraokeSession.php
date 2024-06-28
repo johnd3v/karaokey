@@ -25,4 +25,9 @@ class KaraokeSession extends Model
         return $this->created_at->toDateString() == Carbon::now()->toDateString();
     }
 
+
+    public function karaokeQueues()
+    {
+        return $this->hasMany(KaraokeQueue::class, 'karaoke_session_id');
+    }
 }

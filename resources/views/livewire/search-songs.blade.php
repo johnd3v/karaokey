@@ -22,9 +22,7 @@
                         </div>
                         <div class="mt-2 sm:mt-0 sm:flex-1">
                             <p>{{ $song->snippet->title}}</p>
-                            <button wire:click="addToQueue('{{ $song->id->videoId }}')" class="px-4 py-2 mt-2 text-white bg-blue-500 rounded hover:bg-blue-600">
-                                Add to queue
-                            </button>
+                            <livewire:add-to-queue-button :ytVideo-id="$song->id->videoId" :hash="$hash"/>
                         </div>
                     </li>
                 @endforeach

@@ -17,5 +17,13 @@ class KaraokeQueue extends Model
         'ordinal'
     ];
 
+    protected $casts = [
+        'youtube_data' => 'array'
+    ];
 
+
+    public function karaokeSession()
+    {
+        return $this->belongsTo(KaraokeSession::class, 'karaoke_session_id');
+    }
 }

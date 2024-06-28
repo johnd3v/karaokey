@@ -16,7 +16,7 @@ class SessionForm extends Component
 
     public function mount(){
         $this->karaokeSessions = KaraokeSession::where("user_id",auth()->id())->get();
-        $this->currentSession = KaraokeSession::where("user_id",auth()->id())->currentDay()->first();
+        $this->currentSession = app('currentSession');
     }
 
     public function render()
